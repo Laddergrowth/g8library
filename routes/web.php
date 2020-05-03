@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/insert', function () {
+
+    DB::insert('insert into posts(title, content) values(?, ?)', ['php the best way to go.... lets learn']);
+});
+
 Route::get( '/admin', function () {
     return view( 'admin.index');
 });
