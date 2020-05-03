@@ -31,7 +31,7 @@ class AddIsAdminColumnToPostsTables extends Migration
         Schema::table('posts', function (Blueprint $table) {
 
 
-            $table->dropColumn(is_admin);
+
 
         });
     }
