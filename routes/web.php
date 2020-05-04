@@ -31,3 +31,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+/*
+|--------------------------------------------------------------------------
+| Elloquent
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/find', function() {
+
+    $posts = Post::all();
+
+    foreach($posts as $post) {
+        return $post->title;
+
+    }
+
+});
